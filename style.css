@@ -163,8 +163,9 @@ main {
     margin-bottom: 100px;
 }
 
-#preamble-button {
-    font-size: 5rem;
+#preamble-button .material-symbols-outlined {
+    font size: 5rem;
+    font-size: 80px;
     color: #3a933c;
     text-decoration:none;
 }
@@ -183,3 +184,4 @@ main {
 #enter-button:focus {
     background: #333;
 }
+

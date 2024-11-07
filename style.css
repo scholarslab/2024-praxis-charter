@@ -165,9 +165,15 @@ main {
     margin-bottom: 100px;
 }
 
+#preamble-button {
+    position: absolute;
+    left: 100px;
+
+}
+
 #preamble-button .material-symbols-outlined {
     font size: 5rem;
-    font-size: 80px;
+    font-size: 60px;
     color: #3a933c;
     text-decoration:none;
 }

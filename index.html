@@ -65,7 +65,25 @@
 
     <script>
 
-        console.log('Hello, world!');
+        var sections = document.querySelectorAll('section');
+
+        sections.forEach(function(s) {
+            console.log(s.id);
+        });
+
+        window.addEventListener('load', function() {
+            hash = window.location.hash;
+            hash = hash.substring(1);
+            if (hash) {
+                sections.forEach(function(i) {
+                    i.style.display = 'none';
+                });
+
+                var currentSection = document.getElementById(hash);
+                currentSection.style.display = 'block';
+            }
+        });
+
         var preamble = document.querySelector('#preamble');
         var charter = document.querySelector('#charter');
         charter.style.display = 'none';

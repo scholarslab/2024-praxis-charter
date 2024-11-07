@@ -171,6 +171,7 @@ main {
 
 #enter-button {
     text-decoration:none;
+    font-family: "Chelsea Market";
     background: #3a933c;
     color: white;
     width: fit-content;

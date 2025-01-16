@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
 
+/*All screen widths*/
 {
     box-sizing: border-box;
 }
@@ -44,101 +45,31 @@ img {
     text-shadow: none;
 }
 
-nav {
-    background-image: url('assets/tree.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 700px;
-    width: 900px;
-    margin: 0 auto 100px;
-    position: relative;
+nav a:link, nav a:visited {
+    color: #3a933c;
+    text-decoration: none;
+    display:block;
+}
+
+nav a:hover, nav a:focus, nav a:active {
+    color:#0a530b;
+    text-decoration:underline;
+}
+
+
+nav::before {
+    content: "People";
+    display:block;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 10px;
 }
 
 nav a {
-    background-image: url('assets/flower.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    display: block;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    transition: transform .25s ease-in-out;
-}
+    display:block;
+    padding: 0 10px;
 
-nav a:hover {
-    transform: rotate(8deg);
 }
-
-nav a span {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    /* 1 */
-}
-
-nav a:nth-child(1) {
-    top: 50px;
-    left: 230px;
-    width: 85px;
-    height:85px;
-}
-
-nav a:nth-child(2) {
-    top: 100px;
-    left: 500px;
-}
-
-nav a:nth-child(3) {
-    top: 204px;
-    left: 313px;
-    width: 75px;
-    height: 75px;
-}
-nav a:nth-child(4) {
-    top: 175px;
-    right: 200px;
-    width: 90px;
-    height: 90px;
-}
-
-nav a:nth-child(5) {
-    top: 300px;
-    left: 200px;
-}
-
-nav a:nth-child(6) {
-    top: 400px;
-    right: 100px;
-}
-
-nav a:nth-child(7) {
-    bottom: 300px;
-    right: 300px;
-}
-
-nav a:nth-child(8) {
-    bottom: 300px;
-    left: 300px;
-}
-
-nav a:nth-child(9) {
-    bottom: 300px;
-    right: 0px;
-}
-
-nav a:nth-child(10) {
-    bottom: 400px;
-    left: 35px;
-}
-
 h1,h2 {
     font-family: "Chelsea Market", system-ui;
     font-weight: 400;
@@ -161,15 +92,7 @@ main {
     max-width: 800px;
 }
 
-#preamble {
-    margin-bottom: 100px;
-}
 
-#preamble-button {
-    position: absolute;
-    left: 100px;
-
-}
 
 #preamble-button .material-symbols-outlined {
     font size: 5rem;
@@ -193,4 +116,117 @@ main {
 #enter-button:focus {
     background: #333;
 }
+
+/*The below is for screens wider than 600px*/
+@media screen and (min-width: 600px) {
+    nav::before{
+        display:none;
+    }
+
+    nav {
+        background-image: url('assets/tree.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 700px;
+        width: 900px;
+        margin: 0 auto 100px;
+        position: relative;
+    }
+    
+    nav a {
+        background-image: url('assets/flower.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: block;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        transition: transform .25s ease-in-out;
+    }
+    
+    nav a:hover {
+        transform: rotate(8deg);
+    }
+    
+    nav a span {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        /* 1 */
+    }
+    
+    nav a:nth-child(1) {
+        top: 50px;
+        left: 230px;
+        width: 85px;
+        height:85px;
+    }
+    
+    nav a:nth-child(2) {
+        top: 100px;
+        left: 500px;
+    }
+    
+    nav a:nth-child(3) {
+        top: 204px;
+        left: 313px;
+        width: 75px;
+        height: 75px;
+    }
+    nav a:nth-child(4) {
+        top: 175px;
+        right: 200px;
+        width: 90px;
+        height: 90px;
+    }
+    
+    nav a:nth-child(5) {
+        top: 300px;
+        left: 200px;
+    }
+    
+    nav a:nth-child(6) {
+        top: 400px;
+        right: 100px;
+    }
+    
+    nav a:nth-child(7) {
+        bottom: 300px;
+        right: 300px;
+    }
+    
+    nav a:nth-child(8) {
+        bottom: 300px;
+        left: 300px;
+    }
+    
+    nav a:nth-child(9) {
+        bottom: 300px;
+        right: 0px;
+    }
+    
+    nav a:nth-child(10) {
+        bottom: 400px;
+        left: 35px;
+    }
+
+    #preamble {
+        margin-bottom: 100px;
+    }
+    
+    #preamble-button {
+        position: absolute;
+        left: 100px;
+    
+    }
+
+    }
 

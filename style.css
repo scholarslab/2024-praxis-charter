@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
 
 /*All screen widths*/
-{
+*{
     box-sizing: border-box;
 }
 
@@ -27,6 +27,8 @@ body {
     font: 18px/1.75 Verdana, sans-serif;
     color: #303030;
     padding-top: 10rem;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 img {
